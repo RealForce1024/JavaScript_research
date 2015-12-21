@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      // 函数名方式
+      function helloWorld(str){
+          // return str //undefined
+          return str
+      }
+      alert(helloWorld('helloworld'));
+
+      // 命名函数
+      var helloworld2 = function(){
+        alert("hello world2")
+      }
+      helloworld2();
+
+      //匿名函数形式 （该种方式极少用）
+      var helloworld3 = new Function('a','b','return a+b')
+      alert(helloworld3(1,2))
+      alert(helloworld3(1,2,3))//结果与上面是一样的
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
