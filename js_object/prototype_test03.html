@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function Person(name,age){
+        this.name = name;
+        this.age = age;
+      }
+      Person.prototype = {
+        getName:function(){
+          return this.name;
+        },
+        getAge:function(){
+          return this.age;
+        }
+      }
+      var person = new Person("zhangsan",20);
+      alert(person.name);
+      alert(person.age);
+      // Person.prototype.sex = "man";
+      // alert(person.sex)
+      // Person.prototype.sex = "woman";
+      // delete person.sex
+      // alert(person.sex)
+
+      Person.prototype.sex = "man";
+      //person.sex = "man";
+      alert(person.sex);
+      person.sex = "woman";
+      delete person.sex;
+      alert(person.sex);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
