@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    //如果this代表全局变量，则这个时候this等于window
+      // alert(this==window);
+      // alert(this.alert == window.alert)
+      function foo(){
+        alert(this); //window
+        alert(this.fruit);
+      }
+      var fruit  = "apple";
+      foo();
+
+      var pack = { //自定义对象并将属性foo只想全局函数foo
+        fruit:"orange",
+        foo:foo
+      }
+
+      pack.foo();
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
